@@ -1,0 +1,18 @@
+<table class="base" id="home_page_news">
+  <caption><%= link_to 'News', @news_category %></caption>
+  <%- for news_item in @recent_news -%>
+  <tr>
+    <td><h4><%= link_to news_item.title, news_item %></h4></td>
+  </tr>
+  <%- end -%>
+  <%- if @recent_news.empty? -%>
+  <tr>
+    <td><h4>No new news in the last 4 weeks</h4></td>
+  </tr>
+  <%- end -%>
+  <tr>
+    <td>
+      <i><%= link_to 'More &hellip;', @news_category %></i>
+    </td>
+  </tr>
+</table>

@@ -1,0 +1,9 @@
+<div align="center">
+  <%= render :partial => 'recent_news' unless @news_category.blank? %>
+</div>
+<div align="center">
+  <%= upcoming_events_table @upcoming_events%>
+</div>
+<div align="center">
+  <%= render :partial => 'recent_results' %>
+</div>
