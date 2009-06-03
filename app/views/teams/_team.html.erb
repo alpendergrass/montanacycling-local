@@ -1,0 +1,15 @@
+<tr>
+  <td class="club_name">
+    <%= link_to(team.name, team_path(team)) %><%= (" (includes " + truncate(team.aliases.collect{ |a| a.name }.join(', '), 80) + ")") unless team.aliases.blank? %>
+  </td>
+  <td class="club_name">
+    <%= "Yes" unless !team.member %>
+  </td>
+  <td>
+    <%= link_to(team.website, team.website) unless team.website.blank? %>
+  </td>
+  <td class="contact">
+    <%= link_to_contact(team) %>
+  </td>
+  <td class="contact_phone"><%= team.contact_phone %></td>
+</tr>

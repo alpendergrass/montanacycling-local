@@ -30,7 +30,7 @@ render_tabnav :disciplines,
       add_tab do |t|
         t.named 'All'
         t.titled 'All Disciplines'
-        t.links_to :controller => 'results', :discipline => nil, :year => year
+        t.links_to :controller => 'results', :discipline => '', :year => year
       end
     else
       #remove underscores and captalize each word

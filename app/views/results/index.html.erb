@@ -1,0 +1,23 @@
+<% @page_title = "Results: #{@year}" %>
+
+<%= tabnav :results_disciplines %>
+<%- @years = Event.find_all_years -%>
+<%#- if @years.size > 1 -%>
+  <%= render :partial => "schedule/years",  :locals => { :years => @years } %>
+<%#- end -%>
+<br/>
+
+
+<table class="base">
+  <caption><%= @year %></caption>
+    <% unless @events.empty? %> 
+      <%- for event in @events.sort {|x, y| y.date <=> x.date} -%>
+  <tr class="<%= cycle('even', 'odd') %>">
+    <td class="right"><%= event.short_date %></td>
+    <td><%= link_to event.name, :action => 'event', :id => event.id %></td>
+  </tr>
+      <% end %>
+    <% else %>
+  <tr><td>No results have been posted.</td></tr>
+    <%- end -%>
+</table>
