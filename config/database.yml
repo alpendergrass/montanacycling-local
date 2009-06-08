@@ -7,7 +7,7 @@ development:
 
 test:
   adapter: mysql
-  database: mrba_test
+  database: mbra_test
   username: mbra_test
   host: localhost
   encoding: utf8
