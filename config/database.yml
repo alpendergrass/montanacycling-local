@@ -9,8 +9,9 @@ development:
 
 test:
   adapter: mysql
-  database: montana_test
-  username: ror_test
+  database: racing_on_rails_test
+  username: root
+  password:
   host: localhost
   encoding: utf8
 
