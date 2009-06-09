@@ -1,16 +1,14 @@
 development:
   adapter: mysql
-#  database: MontanaCycling_development
-  database: racing_on_rails_development
-  username: root
-  password:
+  database: mbra_development
+  username: mbra_development
   host: localhost
-  encoding: latin1
+  encoding: utf8
 
 test:
   adapter: mysql
-  database: racing_on_rails_test
-  username: root
+  database: mbra_test
+  username: mbra_test
   password:
   host: localhost
   encoding: utf8
@@ -21,10 +19,3 @@ production:
   username: root
   encoding: utf8
   host: localhost
-
-john:
-  adapter: mysql
-  database: racing_on_rails_development
-  username: ror_development
-  host: localhost
-  encoding: utf8
