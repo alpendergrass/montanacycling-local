@@ -13,6 +13,14 @@ test:
   host: localhost
   encoding: utf8
 
+staging:
+  adapter: mysql
+  database: albert_staging
+  username: albert_staging
+  password: 5bM1wfrfE7
+  encoding: utf8
+  socket: /tmp/mysql.sock
+
 production:
   adapter: mysql
   database: racing_on_rails_production
