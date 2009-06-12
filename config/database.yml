@@ -9,8 +9,17 @@ test:
   adapter: mysql
   database: mbra_test
   username: mbra_test
+  password:
   host: localhost
   encoding: utf8
+
+staging:
+  adapter: mysql
+  database: albert_staging
+  username: albert_staging
+  password: 5bM1wfrfE7
+  encoding: utf8
+  socket: /tmp/mysql.sock
 
 production:
   adapter: mysql
