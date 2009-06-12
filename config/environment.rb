@@ -12,7 +12,7 @@ ASSOCIATION.show_events_velodrome = false
 ASSOCIATION.rental_numbers = 51..99 if RAILS_ENV == 'test'
 ASSOCIATION.usac_region = "Mountain"
 ASSOCIATION.usac_results_format = true
-ASSOCIATION.default_sanctioned_by = "USA Cycling" #mbratodo I was using DEFAULT_SANCTIONING_ORGANIZATION
+ASSOCIATION.default_sanctioned_by = "USA Cycling"
 
 SANCTIONING_ORGANIZATIONS = ["UCI", "USA Cycling"] unless defined?(SANCTIONING_ORGANIZATIONS)
 
