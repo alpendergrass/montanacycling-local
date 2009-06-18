@@ -4,7 +4,7 @@
       <%= link_to racer.name, :controller => '/results', :action => 'racer', :id => racer.id %>
   </td>
   <td class="aliases">
-    <%= truncate(racer.aliases.collect{ |a| a.name }.join(', '), 200) %>
+    <%= truncate(racer.aliases.collect{ |a| a.name }.join(', '), :limit => 200) %>
   </td>
   <td class="right">
     <%= racer.road_category %>
