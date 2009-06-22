@@ -38,8 +38,8 @@ render_tabnav :months,
   # you can use restful routes with:
   #
   #add_tab do |t|
-  #  t.named 'Users'
-  #  t.links_to hash_for_users_path
+  #  t.named 'People'
+  #  t.links_to hash_for_people_path
   #end
   #
   #add_tab do |t|
@@ -55,15 +55,15 @@ render_tabnav :months,
   # # (this partial is evaluated in the page context, so it sees every helper or instance variable)
   #  
   # add_tab do |t|
-  #   t.named "#{current_user} details"
-  #   t.links_to :controller => 'users', :action => 'show', :id => current_user.id
+  #   t.named "#{current_person} details"
+  #   t.links_to :controller => 'people', :action => 'show', :id => current_person.id
   # end
   #
   # # You can have an image inside 
   #
   # add_tab do |t|
   #   t.named image_tag('test')
-  #   t.links_to :controller => 'users', :action => 'show', :id => current_user.id
+  #   t.links_to :controller => 'people', :action => 'show', :id => current_person.id
   # end
 end 
 %>

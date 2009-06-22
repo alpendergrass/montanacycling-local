@@ -13,9 +13,9 @@
   <% @event_results.sort { |x, y| y.event.end_date <=> x.event.end_date }.each do |result| -%>
   <tr class="<%= cycle("even", "odd") %>">
     <td class="place right"><%= result.place %></td>
-    <td class="standings"><%= link_to(result.event.full_name, event_results_path(result.event), :anchor => "race_#{result.race.id}") %></td>
+    <td class="standings"><%= link_to(result.event.full_name, event_results_path(result.event, :anchor => "race_#{result.race.id}")) %></td>
     <td class="category"><%= result.race.name %></td>
-    <td><%= link_to(result.team_name , :controller => 'results', event_team_path(result.team)) unless result.team_name.blank? %></td>
+    <td><%= link_to(result.team_name, team_results_path(result.team)) unless result.team_name.blank? %></td>
     <td class="dates"><%= result.event.date_range_s(:long) %></td>
   </tr>
   <%- end -%>
@@ -23,7 +23,7 @@
 
 <% for result in @competition_results.sort {|x, y| y.event.end_date <=> x.event.end_date } %>
 <br/><br/>
-<% table :caption => link_to("#{result.place.to_i.ordinalize} &mdash; #{result.race.full_name}", event_results_path(result.event)) do %>
+<% table :caption => link_to("#{result.place.to_i.ordinalize} &mdash; #{result.race.full_name}", event_results_path(result.event_results_path)) do %>
   <tr>
     <th>&nbsp;</th>
     <th>Race</th>
@@ -35,8 +35,12 @@
   <tr class="<%= cycle("even", "odd") %>">
     <td class="place right" width="24"><%= score.source_result.place %></td>
     <td class="standings">
-      <%= link_to(score.source_result.event.full_name, event_results_path(score.source_result.eventevent)) unless score.source_result.event.is_a?(Competition) %>
-      <%= link_to(score.source_result.race.full_name, event_results_path(score.source_result.event, @person)) if score.source_result.event.is_a?(Competition)%></td>
+      <%= link_to(score.source_result.event.full_name, 
+                  event_results_path(score.source_result.event, 
+                  :anchor => "race_#{score.source_result.race.id}")) unless score.source_result.event.is_a?(Competition) %>
+      <%= link_to(score.source_result.race.full_name, 
+                  event_person_results_path(score.source_result.event,@person, 
+                  :anchor => "race_#{score.source_result.race.id}")) if score.source_result.event.is_a?(Competition) %></td>
     <td class="category"><%= score.source_result.race.name %></td>
     <td class="dates"><%= score.source_result.event.date_range_s(:long) %></td>
     <td class="right"><%= number_with_precision(score.points, :precision => 1) %></td>

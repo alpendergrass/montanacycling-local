@@ -640,7 +640,7 @@ table#left_nav td.icon_padding {
   white-space: nowrap;  
 }
 
-.user_hint, td.user_hint, table.base td.user_hint
+.person_hint, td.person_hint, table.base td.person_hint
 {
     font-size: 10px;
     font-style: italic;
@@ -902,7 +902,7 @@ table.half_width {
   width: 48%;
 }
 
-td#left_racer {
+td#left_person {
   padding-right: 16px;
 }
 
@@ -910,41 +910,41 @@ td#left_racer {
   background-color: rgb(255,222,20);
 }
 
-table.base#racers, table.base#teams, table.promoters {
+table.base#people, table.base#teams, table.promoters {
   margin-bottom: 0px;
 }
 
-table.base#racers th.name, table.base#teams th.name {
+table.base#people th.name, table.base#teams th.name {
  width: 200px;
  padding-left: 40px;
 }
 
-table.base#racers td.name, table.base#teams td.name {
+table.base#people td.name, table.base#teams td.name {
   width: 240px;
   white-space: nowrap;
 }
 
-table.base#racers td div.editable, table.base#teams td div.editable {
+table.base#people td div.editable, table.base#teams td div.editable {
   white-space: nowrap;
 }
 
-table.base#racers td div.editable input, table.base#teams td div.editable input {
+table.base#people td div.editable input, table.base#teams td div.editable input {
   position: relative;
   top: -4px;
   width: 150px;
 }
 
-table.base#racers td div.editable input.button, table.base#teams td div.editable input.button {
+table.base#people td div.editable input.button, table.base#teams td div.editable input.button {
   top: 0px;
   width: auto;
 }
 
-table.base#racers th.team {
+table.base#people th.team {
   width: 200px;
   margin: 0px;
 }
 
-table.base#racers th.aliases, table.base#racers td.aliases {
+table.base#people th.aliases, table.base#people td.aliases {
   width: 200px;
 }
 
@@ -952,7 +952,7 @@ table.base#teams th.aliases, table.base#teams td.aliases {
   width: 100%;
 }
 
-table.base#racers img.icon, table.base#teams img.icon {
+table.base#people img.icon, table.base#teams img.icon {
   float: left;
   position: relative;
   top: -2px;
@@ -960,35 +960,35 @@ table.base#racers img.icon, table.base#teams img.icon {
   padding-right: 8px;
 }
 
-table.base#racers td.icon a:hover, table.base#teams td.icon a:hover {
+table.base#people td.icon a:hover, table.base#teams td.icon a:hover {
   border: none;
   text-decoration: none;
   background-color: transparent;
 }
 
-table.base#racers td.icon, table.base#teams td.icon  {
+table.base#people td.icon, table.base#teams td.icon  {
   padding-right: 8px;
   padding-top: 3px;
   padding-bottom: 0px;
 }
 
-table.base#racers td.icon img, table.base#teams td.icon img {
+table.base#people td.icon img, table.base#teams td.icon img {
   border: 0px;
 }
 
-table.base#racers td img.cancel, table.base#teams td img.cancel {
+table.base#people td img.cancel, table.base#teams td img.cancel {
   width: 16px;
   height: 16px;
   margin-left: -6px;
 }
 
-table.base#racers td.name a.cancel, table.base#teams td.name a.cancel {
+table.base#people td.name a.cancel, table.base#teams td.name a.cancel {
   border: none;
   text-decoration: none;
   background-color: transparent;
 }
 
-table.base#racers td.member, table.base#teams td.member {
+table.base#people td.member, table.base#teams td.member {
   text-align: center;
   padding-top: 5px;
   padding-bottom: 0px;
