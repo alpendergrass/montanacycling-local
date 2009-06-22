@@ -23,7 +23,7 @@
 
 <% for result in @competition_results.sort {|x, y| y.event.end_date <=> x.event.end_date } %>
 <br/><br/>
-<% table :caption => link_to("#{result.place.to_i.ordinalize} &mdash; #{result.race.full_name}", event_results_path(result.event_results_path)) do %>
+<% table :caption => link_to("#{result.place.to_i.ordinalize} &mdash; #{result.race.full_name}", event_results_path(result.event)) do %>
   <tr>
     <th>&nbsp;</th>
     <th>Race</th>
