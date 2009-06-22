@@ -1,5 +1,5 @@
 
-#mbratodo ExceptionNotifier.exception_recipients = %w(al.pendergrass@gmail.com)
+ExceptionNotifier.exception_recipients = %w(al.pendergrass@gmail.com scott@butlerpress.com)
 
 ASSOCIATION = RacingAssociation.new
 ASSOCIATION.name = 'Montana Bicycle Racing Association'
