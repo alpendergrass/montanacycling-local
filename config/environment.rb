@@ -12,6 +12,7 @@ ASSOCIATION.rental_numbers = 51..99 if RAILS_ENV == 'test'
 ASSOCIATION.usac_region = "Mountain"
 ASSOCIATION.usac_results_format = true
 ASSOCIATION.default_sanctioned_by = "USA Cycling"
+ASSOCIATION.show_events_sanctioning_org_event_id = true
 
 SANCTIONING_ORGANIZATIONS = ["UCI", "USA Cycling"] unless defined?(SANCTIONING_ORGANIZATIONS)
 
