@@ -1,18 +1,9 @@
 <% @page_title = "Schedule: #{@year}" %>
 
 <%= tabnav :schedule_disciplines %>
-<%#alphere links_to_years @discipline %>
-<%#- @years = Event.find_all_years -%>
-<%#- if @years.size > 1 -%>
-  <%= render :partial => "years",  :locals => { :years => @years } %>
-<%#- end -%>
-<%#alphere = render :partial => "disciplines", :locals => { :year => @year } %>
+<%= render :partial => "years",  :locals => { :years => @years } %>
 
 <br/>
-
-<%# if Date.today < Date.new(@year, 2) %>
-  <!--div>Tentative. Dates are subject to change.</div-->
-<%# end %>
 
 <div align="center">
   <table class="base">
