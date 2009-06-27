@@ -695,9 +695,27 @@ table.base#home_page_results
   display: table;
 }
 
-table.base#login
+div.login
 {
-  width: 300px;
+  width: 260px;
+}
+
+div.login label 
+{
+  margin-top: 16px;
+  display: block;
+}
+
+div.login .page_buttons
+{
+  width: 260px;
+  margin-top: 16px;
+  text-align: right;
+}
+
+div.login .page_buttons input
+{
+  margin-left: 8px;
 }
 
 pre
