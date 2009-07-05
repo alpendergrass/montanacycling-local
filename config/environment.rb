@@ -14,6 +14,8 @@ ASSOCIATION.usac_region = "Mountain"
 ASSOCIATION.usac_results_format = true
 ASSOCIATION.default_sanctioned_by = "USA Cycling"
 ASSOCIATION.show_events_sanctioning_org_event_id = true
+ASSOCIATION.competitions = Set.new([:bar, :team_bar, :mbra_bar, :mbra_team_bar])
+ASSOCIATION.mbra_bar_scoring_rules = true
 
-SANCTIONING_ORGANIZATIONS = ["UCI", "USA Cycling"] unless defined?(SANCTIONING_ORGANIZATIONS)
+SANCTIONING_ORGANIZATIONS = ["UCI", "USA Cycling"]
 

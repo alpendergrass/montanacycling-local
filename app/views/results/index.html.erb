@@ -3,21 +3,35 @@
 <%= tabnav :results_disciplines %>
 <%- @years = Event.find_all_years -%>
 <%#- if @years.size > 1 -%>
-  <%= render :partial => "schedule/years",  :locals => { :years => @years } %>
+<%= render :partial => "schedule/years",  :locals => { :years => @years } %>
 <%#- end -%>
 <br/>
 
 
 <table class="base">
   <caption><%= @year %></caption>
-    <% unless @events.empty? %> 
-      <%- for event in @events.sort {|x, y| y.date <=> x.date} -%>
-  <tr class="<%= cycle('even', 'odd') %>">
-    <td class="right"><%= event.short_date %></td>
-    <td><%= link_to event.name, event_results_path(event) %></td>
-  </tr>
-      <% end %>
-    <% else %>
-  <tr><td>No results have been posted.</td></tr>
-    <%- end -%>
+  <% unless @competitions.empty? %>
+  <tr class="<%= cycle('even', 'odd') %>"><td colspan="2"><strong>Series Standings</strong></td></tr>
+    <%- for event in @competitions -%>
+      <tr class="<%= cycle('even', 'odd') %>">
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;<strong><%= link_to event.name, event_results_path(event) %></strong></td>
+      </tr>
+    <% end %>
+  <% else %>
+    <tr><th>No series standings are available.</th></tr>
+  <%- end -%>
+</table>
+
+<table class="base">
+  <% unless @events.empty? %>
+  <tr class="<%= cycle('even', 'odd') %>"><td colspan="2"><strong>Race Results</strong></td></tr>
+    <%- for event in @events.sort {|x, y| y.date <=> x.date} -%>
+      <tr class="<%= cycle('even', 'odd') %>">
+        <td class="right"><%= event.short_date %></td>
+        <td><%= link_to event.name, event_results_path(event) %></td>
+      </tr>
+    <% end %>
+  <% else %>
+    <tr><th>No results have been posted.</th></tr>
+  <%- end -%>
 </table>
