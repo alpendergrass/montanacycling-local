@@ -18,4 +18,5 @@ ASSOCIATION.competitions = Set.new([:bar, :team_bar, :mbra_bar, :mbra_team_bar])
 ASSOCIATION.mbra_bar_scoring_rules = true
 
 SANCTIONING_ORGANIZATIONS = ["UCI", "USA Cycling"]
+SHOW_ALL_TEAMS_ON_PUBLIC_PAGE = true
 
