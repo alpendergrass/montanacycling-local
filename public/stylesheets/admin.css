@@ -651,27 +651,6 @@ td.left, table.base td.left
   text-align: left;
 }
 
-.vertical_field_label
-{
-  text-align: left;
-  vertical-align: bottom;
-  font-weight: bold;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 12px;
-  padding-right: 8px;
-}
-
-.vertical_field
-{
-  text-align: left;
-  vertical-align: top;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 12px;
-  padding-right: 8px;
-}
-
 table.base td.field_value
 {
   padding-top: 9px;
