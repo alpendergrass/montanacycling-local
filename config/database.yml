@@ -23,7 +23,8 @@ staging:
 
 production:
   adapter: mysql
-  database: racing_on_rails_production
-  username: root
+  database: albert_production
+  username: albert_prod
+  password: 5bM1wfrfE7
   encoding: utf8
-  host: localhost
+  socket: /tmp/mysql.sock
