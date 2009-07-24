@@ -19,3 +19,6 @@ ASSOCIATION.competitions = Set.new([:bar, :team_bar, :mbra_bar, :mbra_team_bar])
 SANCTIONING_ORGANIZATIONS = ["UCI", "USA Cycling"]
 SHOW_ALL_TEAMS_ON_PUBLIC_PAGE = true #mbratodo breaks tests
 
+# Homepage display
+WEEKS_OF_RECENT_RESULTS       = 4
+WEEKS_OF_UPCOMING_EVENTS      = 5
