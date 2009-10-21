@@ -13,6 +13,14 @@ test:
   host: localhost
   encoding: utf8
 
+selenium:
+  adapter: mysql
+  database: mbra_test
+  username: mbra_test
+  password:
+  host: localhost
+  encoding: utf8
+
 staging:
   adapter: mysql
   database: albert_staging
