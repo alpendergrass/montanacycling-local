@@ -1,4 +1,4 @@
 set :application, "mbra"
 
-role :app, "www.montanacycling.net"
-role :db, "www.montanacycling.net", :primary => true
+role :app, "69.30.43.18"
+role :db, "69.30.43.18", :primary => true
