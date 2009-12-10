@@ -7,7 +7,7 @@ after "deploy", "deploy:link_to_static_content"
 
 namespace :deploy do
   task :link_to_static_content do
-    run "ln -s /usr/local/www/mbra/archive public/archive"
-    run "ln -s /usr/local/www/mbra/documents public/documents"
+    run "ln -s /usr/local/www/mbra/archive #{release_path}/public/archive"
+    run "ln -s /usr/local/www/mbra/documents #{release_path}/public/documents"
   end
 end
