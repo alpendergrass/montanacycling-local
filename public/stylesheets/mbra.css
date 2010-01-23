@@ -955,7 +955,7 @@ div.tabs {
 
 #notice
 {
-  background-image: url(/images/icons/confirmed.gif);
+  background-image: url(/images/icons/information.png);
   background-repeat: no-repeat;
   background-position: 0px 9px;
 }
@@ -963,7 +963,7 @@ div.tabs {
 #warn
 {
   color: red;
-  background-image: url(/images/icons/warn.gif);
+  background-image: url(/images/icons/error.png);
   background-repeat: no-repeat;
   background-position: 0px 9px;
 }
@@ -1231,7 +1231,7 @@ table.promoters th.name {
 
 table.promoters td.name {
   background-position: 8px 3px;
-  background-image: url(/images/icons/person.gif);
+  background-image: url(/images/icons/user.png);
   background-repeat: no-repeat;
   padding-left: 32px;
   white-space: nowrap;
