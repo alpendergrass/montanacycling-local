@@ -1,4 +1,3 @@
-
 ExceptionNotifier.exception_recipients = %w(al.pendergrass@gmail.com scott@butlerpress.com)
 
 ASSOCIATION = RacingAssociation.new
@@ -14,11 +13,14 @@ ASSOCIATION.usac_region = "Mountain"
 ASSOCIATION.usac_results_format = true
 ASSOCIATION.default_sanctioned_by = "USA Cycling"
 ASSOCIATION.show_events_sanctioning_org_event_id = true
-ASSOCIATION.competitions = Set.new([:bar, :team_bar, :mbra_bar, :mbra_team_bar]) #mbratodo breaks tests
+ASSOCIATION.competitions = Set.new([:bar, :team_bar, :mbra_bar, :mbra_team_bar])
+ASSOCIATION.administrator_tabs = Set.new([ 
+  :schedule, :first_aid, :people, :teams, :velodromes, :categories, :cat4_womens_race_series, :article_categories, :articles, :pages 
+])
 ASSOCIATION.eager_match_on_license = true
 
 SANCTIONING_ORGANIZATIONS = ["UCI", "USA Cycling"]
-SHOW_ALL_TEAMS_ON_PUBLIC_PAGE = true #mbratodo breaks tests
+SHOW_ALL_TEAMS_ON_PUBLIC_PAGE = true
 
 # Homepage display
 WEEKS_OF_RECENT_RESULTS       = 4
