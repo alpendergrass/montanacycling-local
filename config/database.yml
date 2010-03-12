@@ -13,7 +13,7 @@ test:
   host: localhost
   encoding: utf8
 
-selenium:
+acceptance:
   adapter: mysql
   database: mbra_test
   username: mbra_test
