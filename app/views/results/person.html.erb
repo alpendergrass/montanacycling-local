@@ -2,6 +2,9 @@
 
 <%= tabnav :results_disciplines %>
 <br/><br/>
+
+<%= render_page "results/years" %>
+
 <% table :caption => @person.name, :class => "person_results", :id => "person_results" do %>
   <tr>
     <th>Place</th>
