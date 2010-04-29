@@ -1027,6 +1027,11 @@ div.tabs {
   text-decoration: line-through;
 }
 
+.mbra_event {
+  font-weight: bold;
+  font-size: 14px;
+}
+
 label {
   font-weight: bold;
 }
