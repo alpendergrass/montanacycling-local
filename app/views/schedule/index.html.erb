@@ -10,7 +10,7 @@
     <caption><%= @year %></caption>
     <tr class='column_titles'>
       <th>&nbsp;</th>
-      <th>Event</th>
+      <th>MBRA Series Events are in Bold</th>
       <th>Discipline</th>
       <th>Location</th>
       <th>Sponsoring Team</th>
@@ -36,9 +36,19 @@
                 <%- else -%>
                   <td class="link">
                     <%- if (!event.flyer.blank? and event.flyer_approved?) -%>
-                      <a href="<%= event.flyer -%>"><%= event_name -%></a>
+                      <a href="<%= event.flyer -%>">
+                      <%- if event.bar_points > 0 %>
+                        <span class="mbra_event"><%= event_name -%></span>
+                      <%- else -%>
+                        <%= event_name -%>
+                      <%- end -%>
+                      </a>
                     <%- else -%>
-                      <%= event_name -%>
+                      <%- if event.bar_points > 0 %>
+                        <span class="mbra_event"><%= event_name -%></span>
+                      <%- else -%>
+                        <%= event_name -%>
+                      <%- end -%>
                     <%- end -%>
                   <%- end -%>
                 </td> 

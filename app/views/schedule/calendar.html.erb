@@ -10,7 +10,7 @@
 
 <%- for month in @schedule.months -%>
   <table class="base" id="calendar">
-    <caption><%= month.name %> <%= @year %><a name="<%= month.name %>"></a></caption>
+    <caption><%= month.name %> <%= @year %><a name="<%= month.name %>"></a> - MBRA Series Events are in Bold</caption>
       <tr>
         <th>Sunday</th>
         <th>Monday</th>
@@ -34,13 +34,13 @@
         <span class="cancelled"><%= event_name -%></span> <i>cancelled</i>
       <%- else -%>
               <%- if (!event.flyer.blank? and event.flyer_approved?) -%>
-            <a href="<%= event.flyer -%>" class="obvious" <%= "target='_blank'" if ASSOCIATION.flyers_in_new_window? %>><%= event_name -%><%- if (!event.name.include?("MTB") and event.discipline == "Mountain Bike") -%>
+            <a href="<%= event.flyer -%>" class="obvious" <%= "target='_blank'" if ASSOCIATION.flyers_in_new_window? %>><%= "<span class='mbra_event'>" if event.bar_points > 0 %><%= event_name -%><%- if (!event.name.include?("MTB") and event.discipline == "Mountain Bike") -%>
             MTB
-              <%- end -%></a>
+              <%- end -%><%= "</span>" if event.bar_points > 0 %></a>
               <%- else -%>
-            <%= event_name -%><%- if (!event.name.include?("MTB") and event.discipline == "Mountain Bike") -%>
+            <%= "<span class='mbra_event'>" if event.bar_points > 0 %><%= event_name -%><%- if (!event.name.include?("MTB") and event.discipline == "Mountain Bike") -%>
             MTB
-              <%- end -%>
+              <%- end -%><%= "</span>" if event.bar_points > 0 %>
               <%- end -%>
       <%- end -%>
           
